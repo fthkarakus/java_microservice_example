@@ -99,17 +99,6 @@ docker-compose ps
 - API Gateway: http://localhost:8060
 - Kafdrop: http://localhost:9000
 
-## API Dokümantasyonu
-
-Postman koleksiyonu `Microservices.postman_collection.json` dosyasında bulunmaktadır. Koleksiyonu kullanmak için:
-
-1. Postman'i açın
-2. Koleksiyonu import edin
-3. Environment oluşturun ve `base_url` değişkenini `http://localhost:8060` olarak ayarlayın
-4. Önce register endpoint'ini kullanarak bir kullanıcı oluşturun
-5. Login endpoint'ini kullanarak token alın
-6. Token'ı environment variable'a kaydedin
-7. Diğer endpoint'leri kullanmaya başlayabilirsiniz
 
 ## API Endpoints
 
@@ -123,9 +112,9 @@ Postman koleksiyonu `Microservices.postman_collection.json` dosyasında bulunmak
 - PUT `/api/users/{id}/change-password`: Şifre değiştirme
 
 ### Content Service
-- POST `/api/contents`: İçerik oluşturma
-- GET `/api/contents/{id}`: İçerik detayı
-- PUT `/api/contents/{id}`: İçerik güncelleme
+- POST `/api/content`: İçerik oluşturma
+- GET `/api/content/{id}`: İçerik detayı
+- PUT `/api/content/{id}`: İçerik güncelleme
 
 ### Comment Service
 - POST `/api/comments`: Yorum oluşturma
@@ -140,10 +129,10 @@ Postman koleksiyonu `Microservices.postman_collection.json` dosyasında bulunmak
 
 Her servis kendi PostgreSQL veritabanını kullanmaktadır:
 
-- userdb: User Service
-- contentdb: Content Service
-- commentdb: Comment Service
-- analyticsdb: Analytics Service
+- user_db: User Service
+- content_db: Content Service
+- comment_db: Comment Service
+- analytics_db: Analytics Service
 
 ## Event-Driven Mimari
 
