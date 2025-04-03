@@ -72,8 +72,8 @@ Bu proje, modern bir mikroservis mimarisi örneğidir. Spring Boot, Spring Cloud
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/yourusername/microservices.git
-cd microservices
+git clone https://github.com/fthkarakus/java_microservice_example.git
+cd java_microservice_example
 ```
 
 2. Docker Compose ile servisleri başlatın:
